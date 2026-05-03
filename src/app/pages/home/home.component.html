@@ -1,0 +1,76 @@
+<section class="hero text-center">
+  <div class="container">
+    <img src="assets/images/main tea.png" class="img-fluid" alt="Чай">
+  </div>
+</section>
+
+<section class="order-form container mt-72 mb-50">
+  <h2 class="fw-bold text-center mb-50">Ответы на часто задаваемые вопросы</h2>
+
+  <div class="accordion mx-auto" id="faqAccordion">
+    <div class="accordion-item mb-2">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Собираете ли вы подарочные боксы?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item mb-2">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Сколько у вас разновидностей чая?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">У нас более 20 видов чая, включая фруктовые, цветочные и травяные смеси.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item mb-2">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          В какой срок осуществляется доставка?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Доставка по России занимает от 2 до 5 рабочих дней, в зависимости от региона.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item mb-2">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          У вас обновляется ассортимент?
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Да, мы регулярно добавляем новые сорта и сезонные коллекции.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Какого объема у вас пачки чая?
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">Мы предлагаем упаковки по 50, 100 и 250 грамм в зависимости от коллекции.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="popup-backdrop" *ngIf="showPopup">
+  <div class="popup card shadow-lg">
+    <button type="button" class="btn-close ms-auto" aria-label="Close" (click)="closePopup()"></button>
+    <div class="card-body text-center">
+      <h5 class="card-title mb-3">Посмотрите наши чайные коллекции</h5>
+      <button class="btn btn-primary" (click)="goToCatalog()">Смотреть</button>
+    </div>
+  </div>
+</div>

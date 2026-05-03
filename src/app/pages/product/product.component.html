@@ -1,0 +1,23 @@
+<section class="container my-5">
+  <div class="d-flex justify-content-center my-5" *ngIf="loading">
+    <div class="spinner-border text-primary" role="status"></div>
+  </div>
+
+  <div class="alert alert-danger" *ngIf="error && !loading">Товар не найден или не удалось загрузить данные.</div>
+
+  <div class="card product-card" *ngIf="product && !loading">
+    <div class="row g-0 align-items-center">
+      <div class="col-md-5">
+        <img [src]="product.image" [alt]="product.title" class="img-fluid rounded-start product-image">
+      </div>
+      <div class="col-md-7">
+        <div class="card-body p-4">
+          <h1 class="card-title fw-bold mb-3">{{ product.title }}</h1>
+          <p class="card-text fs-5">{{ product.description }}</p>
+          <p class="fs-4 fw-bold my-4">{{ product.price }} ₽</p>
+          <button class="btn btn-primary" (click)="buy()">Купить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

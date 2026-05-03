@@ -1,0 +1,63 @@
+<section class="order-form container mt-72 mb-50">
+  <h2 class="fw-bold text-center mb-50">Сделать заказ</h2>
+
+  <div class="alert alert-success text-center fs-4" *ngIf="isSent">Спасибо за заказ!</div>
+
+  <form class="mx-auto" style="max-width: 640px;" [formGroup]="orderForm" (ngSubmit)="submit()" *ngIf="!isSent">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <label class="form-label">Имя</label>
+        <input type="text" class="form-control" formControlName="name">
+        <div class="text-danger small" *ngIf="hasError('name')">Только буквы.</div>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Фамилия</label>
+        <input type="text" class="form-control" formControlName="last_name">
+        <div class="text-danger small" *ngIf="hasError('last_name')">Только буквы.</div>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Телефон</label>
+        <input type="tel" class="form-control" formControlName="phone" placeholder="+79999999999">
+        <div class="text-danger small" *ngIf="hasError('phone')">11 цифр, можно с +.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Страна</label>
+        <input type="text" class="form-control" formControlName="country">
+        <div class="text-danger small" *ngIf="hasError('country')">Заполните страну.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Индекс</label>
+        <input type="text" class="form-control" formControlName="zip">
+        <div class="text-danger small" *ngIf="hasError('zip')">Заполните индекс.</div>
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">Товар</label>
+        <input type="text" class="form-control" formControlName="product">
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">Адрес</label>
+        <input type="text" class="form-control" formControlName="address">
+        <div class="text-danger small" *ngIf="hasError('address')">Разрешены буквы, цифры, пробелы, дефис и слеш.</div>
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">Комментарий к заказу</label>
+        <textarea class="form-control" rows="4" formControlName="comment"></textarea>
+      </div>
+
+      <div class="col-12 d-flex align-items-center gap-3 flex-wrap">
+        <button type="submit" class="btn btn-primary" [disabled]="isLoading">
+          <span class="spinner-border spinner-border-sm me-2" *ngIf="isLoading"></span>
+          Отправить
+        </button>
+        <span class="text-danger" *ngIf="orderError">Произошла ошибка. Попробуйте еще раз.</span>
+      </div>
+    </div>
+  </form>
+</section>

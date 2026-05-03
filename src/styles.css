@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #000;
+  background-color: #fff;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: rgba(0, 0, 0, 1) !important;
+}
+
+.hero {
+  padding-top: 72px;
+}
+
+.hero img {
+  border-radius: 10px;
+}
+
+h1, h2 {
+  font-weight: 700;
+  text-align: center;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+:root {
+  --btn-width: 200px;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--bs-indigo);
+  --bs-btn-border-color: var(--bs-indigo);
+  --bs-btn-hover-bg: #14448A;
+  --bs-btn-hover-border-color: #14448A;
+  width: var(--btn-width);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.search-btn,
+.reset-btn {
+  width: auto;
+}
+
+.accordion {
+  max-width: 856px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  margin-bottom: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+  background-color: var(--bs-indigo);
+  color: #fff;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.accordion-item:first-child .accordion-button {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.accordion-item:last-child .accordion-button.collapsed {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.accordion-button:not(.collapsed) {
+  border-radius: 12px;
+}
+
+.accordion-body {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.mt-72 { margin-top: 72px !important; }
+.mb-50 { margin-bottom: 50px !important; }
+
+form input,
+form textarea {
+  border-radius: 6px;
+}
+
+.product-card {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.product-image {
+  width: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.popup-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.popup {
+  max-width: 420px;
+  width: 100%;
+  padding: 14px;
+}
+
+footer {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 576px) {
+  .btn-primary {
+    width: 100%;
+  }
+
+  .search-btn,
+  .reset-btn {
+    width: auto;
+  }
+}
