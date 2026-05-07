@@ -1,0 +1,53 @@
+<section class="hero text-center">
+  <div class="container">
+    <img src="../../../../assets/images/main%20tea.png" class="img-fluid" alt="Чай">
+  </div>
+</section>
+
+<section class="order-form container mt-72 mb-50">
+  <h2 class="fw-bold text-center mb-50">Ответы на часто задаваемые вопросы</h2>
+
+    <ngb-accordion [closeOthers]="true" activeIds="panel-1" class="accordion mx-auto">
+
+        <ngb-panel id="panel-1" title="Собираете ли вы подарочные боксы?">
+            <ng-template ngbPanelContent>
+                Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость.
+            </ng-template>
+        </ngb-panel>
+
+        <ngb-panel id="panel-2" title="Сколько у вас разновидностей чая?">
+            <ng-template ngbPanelContent>
+                У нас более 20 видов чая, включая фруктовые, цветочные и травяные смеси.
+            </ng-template>
+        </ngb-panel>
+
+        <ngb-panel id="panel-3" title="В какой срок осуществляется доставка?">
+            <ng-template ngbPanelContent>
+                Доставка по России занимает от 2 до 5 рабочих дней, в зависимости от региона.
+            </ng-template>
+        </ngb-panel>
+
+        <ngb-panel id="panel-4" title="У вас обновляется ассортимент?">
+            <ng-template ngbPanelContent>
+                Да, мы регулярно добавляем новые сорта и сезонные коллекции.
+            </ng-template>
+        </ngb-panel>
+
+        <ngb-panel id="panel-5" title="Какого объема у вас пачки чая?">
+            <ng-template ngbPanelContent>
+                Мы предлагаем упаковки по 50, 100 и 250 грамм в зависимости от коллекции.
+            </ng-template>
+        </ngb-panel>
+
+    </ngb-accordion>
+</section>
+
+<div class="popup-backdrop" *ngIf="showPopup">
+  <div class="popup card shadow-lg">
+    <button type="button" class="btn-close ms-auto" aria-label="Close" (click)="closePopup()"></button>
+    <div class="card-body text-center">
+      <h5 class="card-title mb-3">Посмотрите наши чайные коллекции</h5>
+      <button class="btn btn-primary" (click)="goToCatalog()">Смотреть</button>
+    </div>
+  </div>
+</div>

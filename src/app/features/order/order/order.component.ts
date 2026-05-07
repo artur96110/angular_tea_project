@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, ValidationErrors, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { OrderData, TeaService } from '../../services/tea.service';
+import { OrderData, TeaService } from '../../../services/tea.service';
 
 @Component({ selector: 'app-order', templateUrl: './order.component.html' })
 export class OrderComponent implements OnInit {

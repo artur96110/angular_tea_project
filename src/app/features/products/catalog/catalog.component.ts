@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, switchMap, takeUntil } from 'rxjs';
-import { TeaProduct } from '../../models/tea-product';
-import { TeaService } from '../../services/tea.service';
+import { TeaProduct } from '../../../models/tea-product';
+import { TeaService } from '../../../services/tea.service';
 
 @Component({ selector: 'app-catalog', templateUrl: './catalog.component.html' })
 export class CatalogComponent implements OnInit, OnDestroy {

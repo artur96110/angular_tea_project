@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TeaProduct } from '../../models/tea-product';
-import { TeaService } from '../../services/tea.service';
+import { TeaProduct } from '../../../models/tea-product';
+import { TeaService } from '../../../services/tea.service';
 
 @Component({ selector: 'app-product', templateUrl: './product.component.html' })
 export class ProductComponent implements OnInit {
